@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles.css';
+import Hello from './components/Hello/Hello.js'
 
 class Contact extends React.Component {
   constructor(props) {
@@ -49,7 +50,10 @@ class Contact extends React.Component {
 }
 
 ReactDOM.render(
-  <Contact />, 
+  <div>
+    <Contact />
+   <Hello/></div> 
+  , 
   document.getElementById('root')
 );
 

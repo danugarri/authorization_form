@@ -1,0 +1,7 @@
+h1{
+    cursor:pointer
+    }
+    h1:hover{
+        font-size:60px;
+        transition:2s;
+    }
