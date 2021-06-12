@@ -1,7 +1,7 @@
-h1{
+h2{
     cursor:pointer
     }
-    h1:hover{
+    h2:hover{
         font-size:60px;
         transition:2s;
     }
