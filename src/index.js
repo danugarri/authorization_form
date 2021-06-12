@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles.css';
 import Hello from './components/Hello/Hello.js'
+import swal from 'sweetalert'
 
 class Contact extends React.Component {
   constructor(props) {
@@ -16,10 +17,23 @@ class Contact extends React.Component {
   authorize(e) {
     const password = e.target.querySelector(
       'input[type="password"]').value;
+      //declaro función que controle las contraseñas incorrectas
+      function incorrecto(){
+        swal('Contraseña incorrecta!, prueba otra vez')  
+    }
+      
     const auth = password === this.state.password;
-    this.setState({
-      authorized: auth
-    });
+    //condicional para cuando no se inserte la contraseña correcta
+    if(auth){
+      this.setState({
+        authorized: auth
+      });
+    }
+    else{
+      incorrecto()
+      }
+     
+    
   }
 
   render() {
